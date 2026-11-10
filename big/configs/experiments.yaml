@@ -1,0 +1,18 @@
+# One-factor-at-a-time catalog. Copy an entry to its own YAML before running.
+experiments:
+  E0: {name: baseline-and-mtp, compare: [mtp-off, mtp-3], hold: "TP2 unsloth NVFP4, 262144, fp8 KV"}
+  E1: {name: checkpoints, compare: [Qwen/Qwen3.8-27B-FP8, Inferact/Qwen3.8-27B-NVFP4, unsloth/Qwen3.8-27B-NVFP4], mtp: [off, on]}
+  E2: {name: topology, compare: [tp2, two-tp1-replicas, tp2-enforce-eager], controls: "same checkpoint; replica recipe max-model-len 32768 and language-model-only"}
+  E2b: {name: replica-routing, compare: [round-robin, least-loaded, session-sticky], ports: [8000, 8001]}
+  E3: {name: prefix-cache, compare: [on, off]}
+  E4: {name: batching, max-num-batched-tokens: [2048, 4096, 8192, 16384], max-num-seqs: [16, 32, 64, 128]}
+  E5: {name: memory, gpu-memory-utilization: [0.85, 0.89, 0.93], kv-cache-dtype: [fp8, auto], max-model-len: [32768, 65536, 131072, 262144], language-model-only: [true, false]}
+  E6: {name: speculative-depth, compare: [off, 1, 2, 3, 4, 5], sweep: concurrency}
+  E7: {name: thinking-effort, compare: [off, low, medium, xhigh]}
+  E8: {name: cuda-graphs, compare: [default, enforce-eager, compilation-config], verify: "installed vllm serve --help"}
+  E9: {name: communication, compare: [custom-all-reduce, disable-custom-all-reduce], env: {NCCL_DEBUG: INFO}}
+  E10: {name: kv-offload, compare: [off, simple], sweep: "projects beyond KV capacity; verify exact flags in installed help"}
+  E11: {name: scheduling, compare: [default, async, priority], verify: "installed vllm serve --help"}
+  E12: {name: frontend, compare: [rust-off, rust-on], env: [VLLM_USE_RUST_FRONTEND], args: [--api-server-count]}
+  E13: {name: stress-and-failure, compare: [overload, burst, disconnect, 200k-prompt, 60-minute-soak]}
+  E14: {name: final, compare: [combined-winners, leave-one-out-ablation]}

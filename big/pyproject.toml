@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-serving-lab"
+version = "0.1.0"
+description = "Reproducible multi-turn agent workload and vLLM experiment harness"
+requires-python = ">=3.10"
+dependencies = ["openai>=1.40", "httpx>=0.27", "numpy>=1.26", "pandas>=2.1", "matplotlib>=3.8", "tabulate>=0.9", "PyYAML>=6.0", "transformers>=5.8.0"]
+
+[project.optional-dependencies]
+serve = ["uvloop>=0.19"]
+test = ["pytest>=8"]
+
+[project.scripts]
+agentic-lab = "harness.cli:main"
+
+[tool.setuptools]
+packages = ["harness"]
