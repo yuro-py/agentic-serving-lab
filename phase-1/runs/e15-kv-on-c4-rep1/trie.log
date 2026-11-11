@@ -1,0 +1,27 @@
+[[32m[1minfo     [0m] [1mstarting benchmark            [0m [36mconcurrency[0m=[35m4[0m [36mduration[0m=[35m60.0[0m [36mmodel[0m=[35mQwen/Qwen3-0.6B[0m [36mnum_gpus[0m=[35mNone[0m [36mworkload_templates[0m=[35m2[0m
+[[33m[1mwarning  [0m] [1mrequest failed                [0m [36merror[0m=[35m"Error code: 400 - This model's maximum context length is 4096 tokens. However, your prompt contains at least 4097 input tokens, which exceeds this limit even without any output tokens. Please reduce the length of the input prompt. (parameter=input_tokens, value=4097)"[0m [36mturn[0m=[35m5[0m
+[[32m[1minfo     [0m] [1mbenchmark complete            [0m [36mcache_hit_rate_pct_max[0m=[35m84.28380187416332[0m [36mcache_hit_rate_pct_mean[0m=[35m82.65197131420291[0m [36mcache_hit_rate_pct_min[0m=[35m80.3669181831632[0m [36mcache_hit_rate_pct_p50[0m=[35m82.40639126074248[0m [36mcache_hit_rate_pct_p90[0m=[35m84.27139256803682[0m [36mcache_hit_rate_pct_p95[0m=[35m84.2775970701169[0m [36mcache_hit_rate_pct_p99[0m=[35m84.28256091335403[0m [36mcached_prompt_tok_per_s[0m=[35m2754.193956691532[0m [36mcompleted_requests[0m=[35m12[0m [36mcompletion_tok_per_s[0m=[35m133.74771845289146[0m [36meligible_cache_hit_rate_pct_max[0m=[35m99.32165956775518[0m [36meligible_cache_hit_rate_pct_mean[0m=[35m98.56988947141741[0m [36meligible_cache_hit_rate_pct_min[0m=[35m96.60724554341576[0m [36meligible_cache_hit_rate_pct_p50[0m=[35m99.12812679855304[0m [36meligible_cache_hit_rate_pct_p90[0m=[35m99.30521058231383[0m [36meligible_cache_hit_rate_pct_p95[0m=[35m99.31304333545829[0m [36meligible_cache_hit_rate_pct_p99[0m=[35m99.3199363212958[0m [36mfailed_requests[0m=[35m1[0m [36mlast_30s_window_cached_prompt_tok_per_s[0m=[35m2781.6532118784644[0m [36mlast_30s_window_completion_tok_per_s[0m=[35m133.08577156596948[0m [36mlast_30s_window_new_prompt_tok_per_s[0m=[35m552.7509094552407[0m [36mlast_30s_window_prompt_tok_per_s[0m=[35m3334.4041213337055[0m [36mlatency_s_max[0m=[35m18.400733795002452[0m [36mlatency_s_mean[0m=[35m16.432282557084363[0m [36mlatency_s_min[0m=[35m14.529077793002216[0m [36mlatency_s_p50[0m=[35m16.402793751500212[0m [36mlatency_s_p90[0m=[35m18.247731172899147[0m [36mlatency_s_p95[0m=[35m18.32178863915069[0m [36mlatency_s_p99[0m=[35m18.3849447638321[0m [36mnew_prompt_tok_per_s[0m=[35m568.7080932686865[0m [36mprompt_tok_per_s[0m=[35m3322.902049960219[0m [36msteady_state_cached_prompt_tok_per_s[0m=[35m2882.375110012453[0m [36msteady_state_completion_tok_per_s[0m=[35m135.91525365461032[0m [36msteady_state_new_prompt_tok_per_s[0m=[35m570.012364140612[0m [36msteady_state_prompt_tok_per_s[0m=[35m3452.3874741530653[0m [36mtrace_per_s[0m=[35m0.19785165451611164[0m [36mwall_time_s[0m=[35m60.6515019010003[0m
+
+                             Per-trace metrics                             
+┏━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric ┃ Latency (s) ┃ Cache hit rate (%) ┃ Eligible cache hit rate (%) ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ mean   │      16.432 │               82.7 │                        98.6 │
+│ min    │      14.529 │               80.4 │                        96.6 │
+│ p50    │      16.403 │               82.4 │                        99.1 │
+│ p90    │      18.248 │               84.3 │                        99.3 │
+│ p95    │      18.322 │               84.3 │                        99.3 │
+│ p99    │      18.385 │               84.3 │                        99.3 │
+│ max    │      18.401 │               84.3 │                        99.3 │
+└────────┴─────────────┴────────────────────┴─────────────────────────────┘
+
+                          Workload metrics                          
+                   completed=12/13  trace/s=0.20                    
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Metric                ┃ Overall ┃ Last 30s Window ┃ Steady State ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ total prompt tok/s    │ 3322.90 │         3334.40 │      3452.39 │
+│ cached prompt tok/s   │ 2754.19 │         2781.65 │      2882.38 │
+│ uncached prompt tok/s │  568.71 │          552.75 │       570.01 │
+│ completion tok/s      │  133.75 │          133.09 │       135.92 │
+└───────────────────────┴─────────┴─────────────────┴──────────────┘

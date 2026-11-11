@@ -1,0 +1,2 @@
+run,ttft_p50,ttft_p99,ttfat_p50,ttfat_p99,decode_tpot_p50,itl_p50,itl_p99,cache_hit_rate,eligible_cache_hit_rate,completion_tok_s,prompt_tok_s,completed,failed,kv_usage_max,preemptions_delta,prefix_queries_delta,prefix_hits_delta,power_mean_w,sm_clock_min_mhz,sm_clock_max_mhz,temp_max_c
+e0-c8-rep3,,,,,,,,,,,,,,0.0,0.0,0.0,0.0,37.93,76.0,87.0,

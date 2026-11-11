@@ -1,2 +1,0 @@
-name, driver_version, memory.total [MiB], memory.used [MiB], power.limit [W], clocks.max.sm [MHz], clocks.max.memory [MHz]
-NVIDIA GeForce RTX 2050, 615.78.08, 4096 MiB, 124 MiB, [N/A], 2100 MHz, 7001 MHz

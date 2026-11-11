@@ -1,2 +1,0 @@
-device copy GB/s: 102.44280255258191
-host to device GB/s: 13.001160994643135
