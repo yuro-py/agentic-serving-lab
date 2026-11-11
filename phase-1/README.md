@@ -30,9 +30,9 @@ Experiments(details and commands in experiments.xlsx):-
 1. Baseline with increasing concurrency.
 2. prefix cache on/off
 3. batching, max sequences, chunked prefill off
-4. kv capacity expansion with gpu-mem-util progression, quantization
+4. kv capacity expansion with gpu-mem-util progression, fp8 quantization
 5. cuda graphs
 6. speculative decoding
 7. burst workload with growing concurrency
-
-
+8. kv and weight offloading
+9. scheduling : fcfs, priority, async
