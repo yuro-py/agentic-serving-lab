@@ -2,7 +2,7 @@
 
 The work below is dependent upon:-
 vllm=0.32.0
-trie-0.1.0
+trie-0.1.0 (from https://github.com/Applied-Compute/trie)
 
 The model and hardware are not hardcoded in the config.
 The experiments are limited to Ampere/Turing gpu architecture and a non-MoE dense model architecture(sparse attention works).
