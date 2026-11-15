@@ -1,0 +1,29 @@
+/home/rdx/Projects/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[[32m[1minfo     [0m] [1mstarting benchmark            [0m [36mconcurrency[0m=[35m1[0m [36mduration[0m=[35m10.0[0m [36mmodel[0m=[35mQwen/Qwen3-0.6B[0m [36mnum_gpus[0m=[35mNone[0m [36mworkload_templates[0m=[35m2[0m
+[[32m[1minfo     [0m] [1mbenchmark complete            [0m [36mcache_hit_rate_pct_max[0m=[35m75.4547496070065[0m [36mcache_hit_rate_pct_mean[0m=[35m73.33952070670024[0m [36mcache_hit_rate_pct_min[0m=[35m71.08339828526891[0m [36mcache_hit_rate_pct_p50[0m=[35m73.4804142278253[0m [36mcache_hit_rate_pct_p90[0m=[35m75.05988253117026[0m [36mcache_hit_rate_pct_p95[0m=[35m75.25731606908839[0m [36mcache_hit_rate_pct_p99[0m=[35m75.41526289942288[0m [36mcached_prompt_tok_per_s[0m=[35m587.1312473809235[0m [36mcompleted_requests[0m=[35m3[0m [36mcompletion_tok_per_s[0m=[35m57.75172440220569[0m [36meligible_cache_hit_rate_pct_max[0m=[35m99.29232444202503[0m [36meligible_cache_hit_rate_pct_mean[0m=[35m97.84764650134218[0m [36meligible_cache_hit_rate_pct_min[0m=[35m95.77464788732394[0m [36meligible_cache_hit_rate_pct_p50[0m=[35m98.4759671746776[0m [36meligible_cache_hit_rate_pct_p90[0m=[35m99.12905298855554[0m [36meligible_cache_hit_rate_pct_p95[0m=[35m99.21068871529029[0m [36meligible_cache_hit_rate_pct_p99[0m=[35m99.27599729667809[0m [36mfailed_requests[0m=[35m0[0m [36mlast_30s_window_cached_prompt_tok_per_s[0m=[35m622.3286756885101[0m [36mlast_30s_window_completion_tok_per_s[0m=[35m57.76920940143573[0m [36mlast_30s_window_new_prompt_tok_per_s[0m=[35m165.1984099901926[0m [36mlast_30s_window_prompt_tok_per_s[0m=[35m787.5270856787027[0m [36mlatency_s_max[0m=[35m5.618779754999196[0m [36mlatency_s_mean[0m=[35m4.923019011332751[0m [36mlatency_s_min[0m=[35m3.704042045999813[0m [36mlatency_s_p50[0m=[35m5.446235232999243[0m [36mlatency_s_p90[0m=[35m5.584270850599205[0m [36mlatency_s_p95[0m=[35m5.6015253027992005[0m [36mlatency_s_p99[0m=[35m5.6153288645591966[0m [36mnew_prompt_tok_per_s[0m=[35m190.51975670317327[0m [36mprompt_tok_per_s[0m=[35m777.6510040840967[0m [36msteady_state_cached_prompt_tok_per_s[0m=[35m630.4517258927633[0m [36msteady_state_completion_tok_per_s[0m=[35m58.955108460927505[0m [36msteady_state_new_prompt_tok_per_s[0m=[35m171.30352269778936[0m [36msteady_state_prompt_tok_per_s[0m=[35m801.7552485905526[0m [36mtrace_per_s[0m=[35m0.2031127470183084[0m [36mwall_time_s[0m=[35m14.770121737999943[0m
+
+                             Per-trace metrics                             
+┏━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric ┃ Latency (s) ┃ Cache hit rate (%) ┃ Eligible cache hit rate (%) ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ mean   │       4.923 │               73.3 │                        97.8 │
+│ min    │       3.704 │               71.1 │                        95.8 │
+│ p50    │       5.446 │               73.5 │                        98.5 │
+│ p90    │       5.584 │               75.1 │                        99.1 │
+│ p95    │       5.602 │               75.3 │                        99.2 │
+│ p99    │       5.615 │               75.4 │                        99.3 │
+│ max    │       5.619 │               75.5 │                        99.3 │
+└────────┴─────────────┴────────────────────┴─────────────────────────────┘
+
+                          Workload metrics                          
+                    completed=3/3  trace/s=0.20                     
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Metric                ┃ Overall ┃ Last 30s Window ┃ Steady State ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ total prompt tok/s    │  777.65 │          787.53 │       801.76 │
+│ cached prompt tok/s   │  587.13 │          622.33 │       630.45 │
+│ uncached prompt tok/s │  190.52 │          165.20 │       171.30 │
+│ completion tok/s      │   57.75 │           57.77 │        58.96 │
+└───────────────────────┴─────────┴─────────────────┴──────────────┘

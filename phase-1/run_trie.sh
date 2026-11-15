@@ -121,7 +121,7 @@ $TRIE_BIN \
   concurrency="$CONCURRENCY" \
   duration="$DURATION" \
   stream=False \
-  | tee "$TRIE_LOG"
+  2>&1 | tee "$TRIE_LOG"
 
 # ------------------------------------------------------------------
 # 6. dump post-run /metrics
