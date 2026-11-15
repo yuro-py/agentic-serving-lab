@@ -1,0 +1,17 @@
+/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[[32m[1minfo     [0m] [1mstarting benchmark            [0m [36mconcurrency[0m=[35m128[0m [36mduration[0m=[35m60.0[0m [36mmodel[0m=[35munsloth/Qwen3.8-27B-NVFP4[0m [36mnum_gpus[0m=[35mNone[0m [36mworkload_templates[0m=[35m2[0m
+[[33m[1mwarning  [0m] [1mrequest failed                [0m [36merror[0m=[35m'Request timed out.'[0m [36mturn[0m=[35m1[0m
+[[32m[1minfo     [0m] [1mbenchmark complete            [0m [36mcached_prompt_tok_per_s[0m=[35m827.8929658441457[0m [36mcompleted_requests[0m=[35m0[0m [36mcompletion_tok_per_s[0m=[35m9.830672481814421[0m [36mfailed_requests[0m=[35m1[0m [36mlast_30s_window_cached_prompt_tok_per_s[0m=[35m3627.5698930395633[0m [36mlast_30s_window_completion_tok_per_s[0m=[35m19.745714814367762[0m [36mlast_30s_window_new_prompt_tok_per_s[0m=[35m1444.2579978508993[0m [36mlast_30s_window_prompt_tok_per_s[0m=[35m5071.827890890462[0m [36mnew_prompt_tok_per_s[0m=[35m1393.7806294632448[0m [36mprompt_tok_per_s[0m=[35m2221.6735953073903[0m [36msteady_state_cached_prompt_tok_per_s[0m=[35m2324.747740283612[0m [36msteady_state_completion_tok_per_s[0m=[35m22.3174799376651[0m [36msteady_state_new_prompt_tok_per_s[0m=[35m2822.5361587279513[0m [36msteady_state_prompt_tok_per_s[0m=[35m5147.283899011563[0m [36mtrace_per_s[0m=[35m0.0[0m [36mwall_time_s[0m=[35m2192.3220450959634[0m
+
+                          Workload metrics                          
+                    completed=0/1  trace/s=0.00                     
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Metric                ┃ Overall ┃ Last 30s Window ┃ Steady State ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ total prompt tok/s    │ 2221.67 │         5071.83 │      5147.28 │
+│ cached prompt tok/s   │  827.89 │         3627.57 │      2324.75 │
+│ uncached prompt tok/s │ 1393.78 │         1444.26 │      2822.54 │
+│ completion tok/s      │    9.83 │           19.75 │        22.32 │
+└───────────────────────┴─────────┴─────────────────┴──────────────┘
