@@ -1,0 +1,63 @@
+/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347] 
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347]        █     █     █▄   ▄█
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347]  ▄▄ ▄█ █     █     █ ▀▄▀ █  version 0.32.0
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347]   █▄█▀ █     █     █     █  model   unsloth/Qwen3.8-27B-NVFP4
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347]    ▀▀  ▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:347] 
+(APIServer pid=32757) INFO 11-14 13:04:49 [api_utils.py:286] non-default args: {'model_tag': 'unsloth/Qwen3.8-27B-NVFP4', 'enable_auto_tool_choice': True, 'tool_call_parser': 'qwen3_coder', 'enable_prompt_tokens_details': True, 'port': 8080, 'model': 'unsloth/Qwen3.8-27B-NVFP4', 'max_model_len': 262144, 'reasoning_parser': 'qwen3', 'tensor_parallel_size': 2, 'kv_cache_dtype': 'fp8', 'enable_chunked_prefill': False, 'linear_backend': 'marlin'}
+(APIServer pid=32757) WARNING 11-14 13:04:49 [interface.py:1457] Unknown vLLM environment variable detected: VLLM_TEST_ENDPOINT
+(APIServer pid=32757) WARNING 11-14 13:04:49 [interface.py:1457] Unknown vLLM environment variable detected: VLLM_ARGS
+(APIServer pid=32757) WARNING 11-14 13:04:49 [interface.py:1457] Unknown vLLM environment variable detected: VLLM_MODEL
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+(APIServer pid=32757) INFO 11-14 13:04:50 [model.py:733] Resolved architecture: Qwen3_5ForConditionalGeneration
+(APIServer pid=32757) INFO 11-14 13:04:50 [model.py:2152] Using max model len 262144
+Fetching 11 files:   0%|          | 0/11 [00:00<?, ?it/s]Fetching 11 files: 100%|██████████| 11/11 [00:00<00:00, 894.13it/s]
+(APIServer pid=32757) WARNING 11-14 13:04:53 [arg_utils.py:3005] This model does not officially support disabling chunked prefill. Disabling this manually may cause the engine to crash or produce incorrect outputs.
+(APIServer pid=32757) INFO 11-14 13:04:53 [cache.py:361] Using fp8 data type to store kv cache. It reduces the GPU memory footprint and boosts the performance. Meanwhile, it may cause accuracy drop without a proper scaling factor
+(APIServer pid=32757) INFO 11-14 13:04:53 [config.py:688] Mamba cache mode is set to 'align' for Qwen3_5ForConditionalGeneration by default when prefix caching is enabled
+Traceback (most recent call last):
+  File "/workspace/agentic-serving-lab/phase-2/.venv/bin/vllm", line 10, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/main.py", line 120, in main
+    args.dispatch_function(args)
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/cli/serve.py", line 156, in cmd
+    uvloop.run(run_server(args))
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 96, in run
+    return __asyncio.run(
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "uvloop/loop.pyx", line 1515, in uvloop.loop.Loop.run_until_complete
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/uvloop/__init__.py", line 48, in wrapper
+    return await main
+           ^^^^^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 177, in run_server
+    await run_server_worker(listen_address, sock, args, **uvicorn_kwargs)
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 195, in run_server_worker
+    async with build_async_engine_client(
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 61, in build_async_engine_client
+    async with build_async_engine_client_from_engine_args(
+  File "/usr/lib/python3.12/contextlib.py", line 210, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/entrypoints/launchers/api_server/entry.py", line 83, in build_async_engine_client_from_engine_args
+    vllm_config = engine_args.create_engine_config(usage_context=usage_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/vllm/engine/arg_utils.py", line 2838, in create_engine_config
+    config = VllmConfig(
+             ^^^^^^^^^^^
+  File "/workspace/agentic-serving-lab/phase-2/.venv/lib/python3.12/site-packages/pydantic/_internal/_dataclasses.py", line 121, in __init__
+    s.__pydantic_validator__.validate_python(ArgsKwargs(args, kwargs), self_instance=s)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for VllmConfig
+  Assertion failed, Chunked prefill is required for mamba cache mode 'align'. [type=assertion_error, input_value=ArgsKwargs((), {'model_co... 'shutdown_timeout': 0}), input_type=ArgsKwargs]
+    For further information visit https://errors.pydantic.dev/2.14/v/assertion_error

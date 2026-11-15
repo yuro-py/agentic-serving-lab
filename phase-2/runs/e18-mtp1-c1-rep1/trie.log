@@ -1,0 +1,26 @@
+[[32m[1minfo     [0m] [1mstarting benchmark            [0m [36mconcurrency[0m=[35m1[0m [36mduration[0m=[35m60.0[0m [36mmodel[0m=[35munsloth/Qwen3.8-27B-NVFP4[0m [36mnum_gpus[0m=[35mNone[0m [36mworkload_templates[0m=[35m2[0m
+[[32m[1minfo     [0m] [1mbenchmark complete            [0m [36mcache_hit_rate_pct_max[0m=[35m61.314219356905454[0m [36mcache_hit_rate_pct_mean[0m=[35m56.22353760138221[0m [36mcache_hit_rate_pct_min[0m=[35m51.13285584585897[0m [36mcache_hit_rate_pct_p50[0m=[35m56.22353760138221[0m [36mcache_hit_rate_pct_p90[0m=[35m60.2960830058008[0m [36mcache_hit_rate_pct_p95[0m=[35m60.80515118135313[0m [36mcache_hit_rate_pct_p99[0m=[35m61.21240572179499[0m [36mcached_prompt_tok_per_s[0m=[35m1022.0778526861428[0m [36mcompleted_requests[0m=[35m2[0m [36mcompletion_tok_per_s[0m=[35m8.446924402364816[0m [36meligible_cache_hit_rate_pct_max[0m=[35m83.59599636032758[0m [36meligible_cache_hit_rate_pct_mean[0m=[35m81.19485812109338[0m [36meligible_cache_hit_rate_pct_min[0m=[35m78.79371988185916[0m [36meligible_cache_hit_rate_pct_p50[0m=[35m81.19485812109338[0m [36meligible_cache_hit_rate_pct_p90[0m=[35m83.11576871248073[0m [36meligible_cache_hit_rate_pct_p95[0m=[35m83.35588253640415[0m [36meligible_cache_hit_rate_pct_p99[0m=[35m83.54797359554289[0m [36mfailed_requests[0m=[35m0[0m [36mlast_30s_window_cached_prompt_tok_per_s[0m=[35m1750.0137918341081[0m [36mlast_30s_window_completion_tok_per_s[0m=[35m9.718815397143919[0m [36mlast_30s_window_new_prompt_tok_per_s[0m=[35m321.03441827985074[0m [36mlast_30s_window_prompt_tok_per_s[0m=[35m2071.0482101139587[0m [36mlatency_s_max[0m=[35m44.10622593498556[0m [36mlatency_s_mean[0m=[35m42.61804280849174[0m [36mlatency_s_min[0m=[35m41.129859681997914[0m [36mlatency_s_p50[0m=[35m42.61804280849174[0m [36mlatency_s_p90[0m=[35m43.808589309686795[0m [36mlatency_s_p95[0m=[35m43.95740762233618[0m [36mlatency_s_p99[0m=[35m44.076462272455686[0m [36mnew_prompt_tok_per_s[0m=[35m438.48923119831585[0m [36mprompt_tok_per_s[0m=[35m1460.5670838844587[0m [36msteady_state_cached_prompt_tok_per_s[0m=[35m1245.7539203109156[0m [36msteady_state_completion_tok_per_s[0m=[35m9.09862875455325[0m [36msteady_state_new_prompt_tok_per_s[0m=[35m428.6465102145086[0m [36msteady_state_prompt_tok_per_s[0m=[35m1674.4004305254243[0m [36mtrace_per_s[0m=[35m0.023463678895457824[0m [36mwall_time_s[0m=[35m85.2381252279738[0m
+
+                             Per-trace metrics                             
+┏━━━━━━━━┳━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Metric ┃ Latency (s) ┃ Cache hit rate (%) ┃ Eligible cache hit rate (%) ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ mean   │      42.618 │               56.2 │                        81.2 │
+│ min    │      41.130 │               51.1 │                        78.8 │
+│ p50    │      42.618 │               56.2 │                        81.2 │
+│ p90    │      43.809 │               60.3 │                        83.1 │
+│ p95    │      43.957 │               60.8 │                        83.4 │
+│ p99    │      44.076 │               61.2 │                        83.5 │
+│ max    │      44.106 │               61.3 │                        83.6 │
+└────────┴─────────────┴────────────────────┴─────────────────────────────┘
+
+                          Workload metrics                          
+                    completed=2/2  trace/s=0.02                     
+┏━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ Metric                ┃ Overall ┃ Last 30s Window ┃ Steady State ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ total prompt tok/s    │ 1460.57 │         2071.05 │      1674.40 │
+│ cached prompt tok/s   │ 1022.08 │         1750.01 │      1245.75 │
+│ uncached prompt tok/s │  438.49 │          321.03 │       428.65 │
+│ completion tok/s      │    8.45 │            9.72 │         9.10 │
+└───────────────────────┴─────────┴─────────────────┴──────────────┘
