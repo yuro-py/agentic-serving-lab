@@ -5,6 +5,8 @@ Two phases, one method: the same experiment ladder, run first on a tiny model on
 
 ## Headline findings (phase 2, Qwen3.8-27B on 2x RTX 5090)
 
+![vLLM concurrency cliff on 2x RTX 5090](concurrency-cliff.png)
+
 - **Prefix caching is the biggest lever.** It works on the hybrid-attention model (92-98% eligible hit rate) and made multi-turn traces 2.5x faster (65 s vs 161 s).
 - **There is a concurrency cliff.** With ~50k-token sessions, 16 concurrent sessions fit; at 32, cache hit rate falls from 70% to 0%, preemptions appear, and server ITL jumps from 0.3 s to 1.3 s.
 - **MTP speculative decoding did not pay off** at any tested concurrency (flat at c1, -29% throughput at c8).
